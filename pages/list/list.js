@@ -23,7 +23,6 @@ Page({
           result: result,
           time: time
         });
-        console.log(this.data.result)
       },
       complete: () => {
         callBack && callBack();
