@@ -1,0 +1,27 @@
+<view class="nav-bar">
+  <view class="nav" wx:for="{{nav}}">
+    <view wx:if="{{currentNav===item.newsType}}" data-newstype="{{item.newsType}}" class="nav-item nav-active">{{item.name}}</view>
+    <view wx:if="{{currentNav!==item.newsType}}" data-newstype="{{item.newsType}}" class="nav-item" bindtap="onTapNav">{{item.name}}</view>
+  </view>
+</view>
+<view class="panel" bindtap="onTapList" data-listid="{{bigId}}">
+  <image class="panel-mask" src="{{bigImg}}" mode="scaleToFill"></image>
+  <view class="panel-body">
+    <image class="panel-img" src="{{bigImg}}" mode="scaleToFill"></image>
+    <view class="panel-title">{{bigTitle}}</view>
+    <view class="panel-subtitle">{{bigSubTitle}}</view>
+  </view>
+</view>
+<view class="articles">
+  <view class="article" wx:for="{{newsLists}}">
+    <view class="article-item" data-listid="{{item.id}}" bindtap="onTapList">
+      <view class="article-body">
+        <view class="article-title">{{item.title}}</view>
+        <view class="article-subtitle">{{item.source}} {{item.time}}</view>
+      </view>
+      <image class="article-img" src="{{item.firstImage}}" mode="aspectFit "></image>
+    </view>
+  </view>
+</view>
+
+

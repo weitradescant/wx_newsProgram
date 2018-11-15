@@ -1,0 +1,10 @@
+<view class="wrap">
+  <view class="title">{{result.title}}</view>
+  <view class="subtitle">{{result.source}} {{time}}
+    <view class="readCount">阅读 {{result.readCount}}</view>
+  </view>
+  <view class="content" wx:for="{{result.content}}">
+    <view wx:if="{{item.type!=='image'}}" class="{{item.type === 'strong' ? 'strong' : ''}}">{{item.text}}</view>
+    <image wx:if="{{item.type==='image'}}" src="{{item.src}}" mode="scaleToFill"></image>
+  </view>
+</view>

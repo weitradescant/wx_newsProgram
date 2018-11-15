@@ -1,0 +1,24 @@
+.wrap {
+  padding: 50rpx 30rpx;
+}
+.title {
+  font-weight: bold;
+}
+.subtitle {
+  margin-top: 30rpx;
+  font-size: 25rpx;
+  color: #AAA;
+}
+.readCount {
+  float: right;
+}
+.content {
+  margin-top: 40rpx;
+  font-size: 30rpx;
+}
+.content image {
+  width: 690rpx;
+}
+.strong {
+  font-weight: bold;
+}
