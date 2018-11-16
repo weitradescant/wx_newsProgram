@@ -19,7 +19,7 @@
         <view class="article-title">{{item.title}}</view>
         <view class="article-subtitle">{{item.source}} {{item.time}}</view>
       </view>
-      <image class="article-img" src="{{item.firstImage}}" mode="aspectFit "></image>
+      <image class="article-img" src="{{item.firstImage === '' ? '/img/lost-img.jpg' : item.firstImage}}" mode="aspectFit "></image>
     </view>
   </view>
 </view>

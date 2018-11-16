@@ -35,9 +35,10 @@ Page({
           }
         }
         let firstResult = results.shift();//删除第一个元素
+        let bigImg = (firstResult.firstImage === "") ? ("/img/lost-img.jpg") : (firstResult.firstImage);//替代空图片
         this.setData({
           newsLists: results,
-          bigImg: firstResult.firstImage,
+          bigImg: bigImg,
           bigTitle: firstResult.title,
           bigSubTitle: firstResult.source + firstResult.time,
           bigId: firstResult.id
